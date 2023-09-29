@@ -13,12 +13,13 @@
 
 /* body styling */
 .home {
-background: url(../images/home_bg_updated.png), lightgray 50% / cover no-repeat;
-background-repeat: no-repeat;
-background-attachment: fixed;
+  background: url(../images/home_bg_updated.png), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 
 }
+
 #logo {
   text-shadow: 0px 6px 20px #00293A;
   font-style: normal;
@@ -28,87 +29,96 @@ background-attachment: fixed;
 
 
 
-.nav-item:hover, .nav-item.active{
-    text-shadow: 0px 3px 7px #00485e;
-    translate: 0 -5px;
-    transition: all 0.3s ease-in-out;
-    border-bottom: white 2px;
+.nav-item:hover,
+.nav-item.active {
+  text-shadow: 0px 3px 7px #00485e;
+  translate: 0 -5px;
+  transition: all 0.3s ease-in-out;
+  border-bottom: white 2px;
 }
 
-.fa-solid{
-    text-shadow: 0px 6px 20px #00293A;
-    cursor: pointer;
+.fa-solid {
+  text-shadow: 0px 6px 20px #00293A;
+  cursor: pointer;
 }
-.navbar{
+
+.navbar {
   padding: 5px 2rem;
 
 }
 
-.sticky{
-    -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(20px);
+.sticky {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 
-      z-index: 200;
-      border: 1px solid #bfdfff3e;
+  z-index: 200;
+  border: 1px solid #bfdfff3e;
 }
 
 
-p, h1, svg{
+p,
+h1,
+svg {
   text-shadow: 0px 6px 20px #00293A;
-  
+
 
 }
 
-best-beach-lg{
+best-beach-lg {
   margin-right: -20px;
 }
 
-.glass{
+.glass {
   border: solid 1px #b2f1fb28;
 }
-.marginy{
+
+.marginy {
   margin-top: 20px;
 }
 
 @keyframes slideInLeft {
-  from{
+  from {
     transform: translateX(1000px);
     opacity: 0%;
   }
-  to{
+
+  to {
     transform: translateX(0);
     opacity: 100%;
   }
 }
 
 @keyframes slideFromDown {
-  from{
+  from {
     transform: translateY(800px);
     opacity: 0;
   }
 
-  to{transform: translateY(0)}
+  to {
+    transform: translateY(0)
+  }
 }
 
-.hero-title{
+/* .hero-title {
   animation: slideInLeft 1s;
   transition: all 2s ease-out;
   transition-delay: 1s;
-}
+} */
 
-.hero_p{
+/* .hero_p {
   animation: slideFromDown 2s;
   transition: all 2s ease-in-out;
   transition-delay: 1s;
-}
+} */
 
-p{
+p {
   text-shadow: 0px 6px 20px #00293A;
 }
+
 /* ==================== ABOUT STYLING ================== */
 
-.about-bg{
-background: radial-gradient(82.41% 70.71% at 50% 50%, #003040 0%, #001420 100%);
+.about-bg {
+  background: radial-gradient(82.41% 70.71% at 50% 50%, #003040 0%, #001420 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
@@ -117,26 +127,27 @@ background: radial-gradient(82.41% 70.71% at 50% 50%, #003040 0%, #001420 100%);
 }
 
 
-.about-text{ 
+.about-text {
   z-index: 0;
 }
 
 
-.line-height{
-line-height: 60px;
-text-transform: capitalize;
+.line-height {
+  line-height: 60px;
+  text-transform: capitalize;
 }
 
-.line-height-lg{
-line-height: 40px;
-text-transform: capitalize;
+.line-height-lg {
+  line-height: 40px;
+  text-transform: capitalize;
 }
 
-nav, a{
+nav,
+a {
   z-index: 100;
 }
 
-header{
+header {
   z-index: 10000;
 }
 
@@ -145,25 +156,25 @@ header{
 
 /* green background */
 
-.bg-green{
-  background: url(/images/green_space_bg.png), lightgray 50% / cover no-repeat;
+.bg-green {
+  background: url(/images/green_space_bg_comp.png), lightgray 50% / cover no-repeat;
 }
 
-footer{
+footer {
   background: #011C26;
-    height: 120px;
-    flex-shrink: 0;
+  height: 120px;
+  flex-shrink: 0;
 }
+
 /* .text-width{
   width: 30ch;
 } */
 
 /*===================================== map section =====================================*/
 
-.map{
+.map {
   background-image: url(../images/map.png);
   background-position: center top;
-    height: 1481px;
-    flex-shrink: 0;
+  height: 1481px;
+  flex-shrink: 0;
 }
-
