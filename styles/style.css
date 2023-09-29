@@ -1,0 +1,169 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oleo+Script:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ==================== HOME STYLING ================== */
+
+/* body styling */
+.home {
+background: url(../images/home_bg_updated.png), lightgray 50% / cover no-repeat;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+
+}
+#logo {
+  text-shadow: 0px 6px 20px #00293A;
+  font-style: normal;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+
+
+.nav-item:hover, .nav-item.active{
+    text-shadow: 0px 3px 7px #00485e;
+    translate: 0 -5px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: white 2px;
+}
+
+.fa-solid{
+    text-shadow: 0px 6px 20px #00293A;
+    cursor: pointer;
+}
+.navbar{
+  padding: 5px 2rem;
+
+}
+
+.sticky{
+    -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(20px);
+
+      z-index: 200;
+      border: 1px solid #bfdfff3e;
+}
+
+
+p, h1, svg{
+  text-shadow: 0px 6px 20px #00293A;
+  
+
+}
+
+best-beach-lg{
+  margin-right: -20px;
+}
+
+.glass{
+  border: solid 1px #b2f1fb28;
+}
+.marginy{
+  margin-top: 20px;
+}
+
+@keyframes slideInLeft {
+  from{
+    transform: translateX(1000px);
+    opacity: 0%;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideFromDown {
+  from{
+    transform: translateY(800px);
+    opacity: 0;
+  }
+
+  to{transform: translateY(0)}
+}
+
+.hero-title{
+  animation: slideInLeft 1s;
+  transition: all 2s ease-out;
+  transition-delay: 1s;
+}
+
+.hero_p{
+  animation: slideFromDown 2s;
+  transition: all 2s ease-in-out;
+  transition-delay: 1s;
+}
+
+p{
+  text-shadow: 0px 6px 20px #00293A;
+}
+/* ==================== ABOUT STYLING ================== */
+
+.about-bg{
+background: radial-gradient(82.41% 70.71% at 50% 50%, #003040 0%, #001420 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  flex-shrink: 0;
+  padding: 5rem 0;
+}
+
+
+.about-text{ 
+  z-index: 0;
+}
+
+
+.line-height{
+line-height: 60px;
+text-transform: capitalize;
+}
+
+.line-height-lg{
+line-height: 40px;
+text-transform: capitalize;
+}
+
+nav, a{
+  z-index: 100;
+}
+
+header{
+  z-index: 10000;
+}
+
+
+/*===================================== green section =====================================*/
+
+/* green background */
+
+.bg-green{
+  background: url(/images/green_space_bg.png), lightgray 50% / cover no-repeat;
+}
+
+footer{
+  background: #011C26;
+    height: 120px;
+    flex-shrink: 0;
+}
+/* .text-width{
+  width: 30ch;
+} */
+
+/*===================================== map section =====================================*/
+
+.map{
+  background-image: url(../images/map.png);
+  background-position: center top;
+    height: 1481px;
+    flex-shrink: 0;
+}
+
