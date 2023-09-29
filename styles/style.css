@@ -157,7 +157,7 @@ header {
 /* green background */
 
 .bg-green {
-  background: url(/images/green_space_bg_comp.png), lightgray 50% / cover no-repeat;
+  background: url(/images/green_space_bg_comp.png);
 }
 
 footer {
