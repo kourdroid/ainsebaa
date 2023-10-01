@@ -1,3 +1,9 @@
+// preloader
+ window.onload = function() {
+    // Hide or remove preloader
+     document.getElementById('preloader').style.display = 'none';
+ }
+
 // burger menubar
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -15,6 +21,8 @@ window.addEventListener('scroll',()=>{
   header.classList.toggle("sticky",window.scrollY > 0);
 
 })
+
+
 
 
 
