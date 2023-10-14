@@ -37,7 +37,7 @@ For more information about Ain Sebaa, visit the [official website](https://ainse
 
 ---
 
-![Ain Sebaa Logo](images/logo.png)
+![Ain Sebaa](.screenshot_ain_sebaa.png)
 
 ---
 
