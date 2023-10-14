@@ -5,9 +5,9 @@ Welcome to the Ain-Sebaa Beach website repository!
 This project showcases the beauty and charm of Ain Sebaa, a coastal haven with sun-kissed sands, azure waters, and breathtaking vistas. 
 
 ## Table of Contents
-- [About](#about)
-- [Green-Spaces](#green-spaces)
-- [Map](#map)
+- [About](https://kourdroid.github.io/ainsebaa/#About)
+- [Green-Spaces](https://kourdroid.github.io/ainsebaa/#Green-Space)
+- [Map](https://kourdroid.github.io/ainsebaa/#Map)
 
 ## About
 Discover the rich history and culture of Ain Sebaa, from its origins as a fishing village to its growth into a dynamic community. Embrace tradition and progress in this vibrant district along the Casablanca coastline.
