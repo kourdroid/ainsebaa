@@ -33,7 +33,7 @@
         </div>
 
         <div
-          class="nav hidden py-10 text-white  font-normal text-center w-full backdrop-blur-lg shadow-lg shadow-cyan-900  my-5 md:py-0 md:shadow-none glass rounded-2xl md:my-0  md:border-0 md:backdrop-blur-0  md:flex  md:items-center md:flex-row  md:w-auto md:space-x-8 ">
+          class="nav mobile-menu-closed py-10 text-white font-normal text-center w-full backdrop-blur-lg shadow-lg shadow-cyan-900 my-5 md:py-0 md:shadow-none glass rounded-2xl md:my-0 md:border-0 md:backdrop-blur-0 md:flex md:items-center md:flex-row md:w-auto md:space-x-8">
           <a href="#Home"
             class="flex flex-col  justify-center py-5 nav-item font-bold focus:font-extrabold focus:underline focus:underline-offset-4 md:bg-transparent text-white hover:text-cyan-400">Home</a>
           <a href="#About"
@@ -48,24 +48,24 @@
   </header>
 
   <!-- home page section -->
-  <div class="container mx-auto md:border-0 py-36 transition-all duration-500" id="Home">
+  <section class="container mx-auto md:border-0 pt-[120px] lg:pt-[160px] pb-20 transition-all duration-500" id="Home">
     <div
-      class="container lg:mx-auto lg:border-0 lg:flex lg:flex-row-reverse lg:items-center  lg:justify-center lg:mt-20 lg:m-0">
+      class="container lg:mx-auto lg:border-0 lg:flex lg:flex-row-reverse lg:items-center  lg:justify-center lg:mt-0 lg:m-0"> {/* Adjusted lg:mt-20 to lg:mt-0 as padding is on parent now */}
       <section class="hero-title flex justify-center lg:border-0 items-center lg:shadow-none">
-        <img src="./images/Header_page1.png"
+        <img src="./images/Header_page1.png" loading="lazy" alt="Scenic aerial view of Ain Sebaa beach and coastline at sunset."
           class=" hidden lg:flex lg:items-center lg:justify-end margin_beach lg:flex-shrink-0 bg-fixed">
-        <img src="./images/Header_page1_centered.png" width="100%" class="block lg:hidden bg-fixed">
+        <img src="./images/Header_page1_centered.png" loading="lazy" alt="Scenic aerial view of Ain Sebaa beach, formatted for mobile display." width="100%" class="block lg:hidden bg-fixed">
       </section>
       <section class="hero_p flex justify-center lg:justify-start items-center ">
         <div
           class="glass text-center  lg:mr-20 text-white px-32 py-5 backdrop-blur-lg rounded-2xl shadow-lg shadow-cyan-900 m-5 lg:p-0  lg:backdrop-filter-none lg:border-none lg:shadow-none lg:text-left lg:flex lg:flex-col  lg:items-start lg:justify-center">
-          <h1 class="font-semibold uppercase text-2xl lg:text-2xl lg:text-left">Welcome to<br>Ain-sebaa Beach:<br>Where
-            Paradise <br>Meets the Sea!</h1>
+          <h3 class="font-semibold uppercase text-2xl lg:text-2xl lg:text-left heading-shadow">Welcome to<br>Ain-sebaa Beach:<br>Where
+            Paradise <br>Meets the Sea!</h3>
           <svg xmlns="http://www.w3.org/2000/svg" width="150" height="4" viewBox="0 0 150 4" fill="none"
-            class="mx-auto lg:mx-0 flex-shrink-0 stroke-2 my-5 rounded-full">
-            <path d="M0 2.5H198" stroke="white" stroke-width="4" class="" />
+            class="mx-auto lg:mx-0 flex-shrink-0 my-5"> {/* Removed stroke-2, rounded-full as less relevant for SVG path itself */}
+            <path d="M2 2H148" stroke="white" stroke-width="4" stroke-linecap="round" />
           </svg>
-          <p class="text-xl text-center lg:text-lg lg:text-left">Escape to a coastal haven of <br>sun-kissed sands,
+          <p class="text-base lg:text-lg text-center lg:text-left leading-relaxed">Escape to a coastal haven of <br>sun-kissed sands,
             azure waters, and breathtaking <br> vistas at Ain-sebaa Beach.</p>
         </div>
       </section>
@@ -77,61 +77,61 @@
     <div class="container mx-auto">
       <!-- about title -->
       <div class="pb-8">
-        <p class="font-black text-white text-center text-6xl mb-3">
+        <h2 class="font-black text-white text-center text-4xl sm:text-5xl lg:text-6xl mb-3 heading-shadow">
           ABOUT
-        </p>
+        </h2>
         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="4" viewBox="0 0 132 4" fill="none" class="mx-auto">
           <path d="M2 2H129.5" stroke="white" stroke-width="4" stroke-linecap="round" />
         </svg>
       </div>
 
       <!-- image and text -->
-      <div class="flex flex-col-reverse text-center w-full my-10 lg:text-left lg:my-20 lg:flex-row lg:justify-between">
+      <div class="flex flex-col-reverse text-center w-full my-12 lg:my-16 lg:text-left lg:flex-row lg:justify-between">
 
         <!-- text div -->
         <div
-          class="about-text  backdrop-blur-lg my-5 p-10 rounded-2xl border border-cyan-700 mx-auto w-full lg:w-2/4 lg:border-none lg:backdrop-blur-none">
-          <p class=" about-text font-semibold uppercase text-2xl lg:w-3/4  lg:text-3xl lg:text-left text-white">
+          class="about-text animate-on-scroll backdrop-blur-lg my-5 p-8 rounded-2xl border border-cyan-700 mx-auto w-full lg:w-2/4 lg:border-none lg:backdrop-blur-none">
+          <h3 class="font-semibold uppercase text-xl lg:text-2xl lg:w-3/4 lg:text-left text-white heading-shadow">
             Embracing Tradition,<br>
             Embracing Tomorrow
-          </p>
+          </h3>
           <svg xmlns="http://www.w3.org/2000/svg" width="224" height="4" viewBox="0 0 224 4" fill="none"
             class="mx-auto my-5 lg:mx-0">
             <path d="M2 2H222" stroke="white" stroke-width="4" stroke-linecap="round" />
           </svg>
-          <p class="line-height text-white font-light text-2xl lg:text-3xl lg:line-height-lg lg:w-3/4 lg:text-left ">
+          <p class="text-base lg:text-lg text-white lg:w-3/4 lg:text-left leading-relaxed">
             Nestled along the vibrant coastline of Casablanca, Ain Sebaa is more than just a district; it's a living
             tapestry of history, culture, and progress. From its humble beginnings as a fishing village, Ain Sebaa has
             grown into a dynamic community that celebrates both its roots and its aspirations.
           </p>
         </div>
         <!-- image div -->
-        <div class="">
-          <img src="./images/about-img.png" alt="" class="about-img rounded-3xl">
+        <div class="animate-on-scroll">
+          <img src="./images/about-img.png" loading="lazy" alt="Stylized illustration of traditional Moroccan architecture in Ain Sebaa." class="about-img rounded-3xl image-hover-effect">
         </div>
       </div>
 
       <!-- 2nd Part -->
 
-      <div class="flex flex-col text-center w-full lg:text-left lg:flex-row lg:justify-between">
+      <div class="flex flex-col text-center w-full my-12 lg:my-16 lg:text-left lg:flex-row lg:justify-between">
 
 
         <!-- image div -->
-        <div class="flex justify-center lg:justify-between">
-          <img src="./images/about-img2.png" alt="" class="about-img rounded-3xl flex-shrink">
+        <div class="flex justify-center lg:justify-between animate-on-scroll">
+          <img src="./images/about-img2.png" loading="lazy" alt="Modern buildings and cityscape reflecting Ain Sebaa's growth." class="about-img rounded-3xl flex-shrink image-hover-effect">
         </div>
         <!-- text div -->
         <div
-          class="about-text lg:flex lg:flex-col lg:justify-start lg:items-end backdrop-blur-lg my-5 p-10 rounded-2xl border border-cyan-700 mx-auto w-full lg:w-2/4 lg:border-none lg:backdrop-blur-none">
-          <p class=" about-text font-semibold uppercase text-2xl lg:w-3/4  lg:text-3xl lg:text-right text-white">
+          class="about-text animate-on-scroll lg:flex lg:flex-col lg:justify-start lg:items-end backdrop-blur-lg my-5 p-8 rounded-2xl border border-cyan-700 mx-auto w-full lg:w-2/4 lg:border-none lg:backdrop-blur-none">
+          <h3 class="font-semibold uppercase text-xl lg:text-2xl lg:w-3/4 lg:text-right text-white heading-shadow">
             Preserving Heritage,
             Embracing Growth
-          </p>
+          </h3>
           <svg xmlns="http://www.w3.org/2000/svg" width="224" height="4" viewBox="0 0 224 4" fill="none"
             class="mx-auto my-5 lg:mx-0 lg:flex lg:justify-between">
             <path d="M2 2H222" stroke="white" stroke-width="4" stroke-linecap="round" />
           </svg>
-          <p class="line-height text-white font-light text-2xl lg:text-3xl lg:line-height-lg lg:w-3/4 lg:text-right ">
+          <p class="text-base lg:text-lg text-white lg:w-3/4 lg:text-right leading-relaxed">
             From Past to Present <br><br>
 
             Ain Sebaa's journey is a testament to the enduring spirit of its residents. With a history steeped in
@@ -154,9 +154,9 @@
 
       <!-- Green title -->
       <div class="">
-        <p class="font-black text-white text-center text-6xl my-3 uppercase">
+        <h2 class="font-black text-white text-center text-4xl sm:text-5xl lg:text-6xl my-3 uppercase heading-shadow">
           Green-Spaces
-        </p>
+        </h2>
         <svg xmlns="http://www.w3.org/2000/svg" width="132" height="4" viewBox="0 0 132 4" fill="none" class="mx-auto">
           <path d="M2 2H129.5" stroke="white" stroke-width="4" stroke-linecap="round" />
         </svg>
@@ -164,19 +164,19 @@
 
       <!-- green content -->
       <div class="flex flex-col items-center justify-center lg:justify-between lg:flex-row mt-14 lg:mt-14 ">
-        <div class="flex justify-center lg:justify-start items-center lg:w-1/2 hero-title">
-          <img src="./images/green_space_title2_shadow.png" class="lg:w-full" width="">
+        <div class="flex justify-center lg:justify-start items-center lg:w-1/2 hero-title animate-on-scroll">
+          <img src="./images/green_space_title2_shadow.png" loading="lazy" alt="Lush public park in Ain Sebaa with walking paths and trees." class="lg:w-full" width="">
         </div>
         <div class="hero_p flex justify-center lg:justify-end items-center lg:w-1/2">
           <div
-            class="text-width text-white w-full p-5 backdrop-blur-lg rounded-xl glass my-20 m-5 lg:w-full lg:backdrop-blur-none lg:border-none">
-            <h1 class="font-black uppercase text-4xl text-center">Discover Ain Sebaa's
-              Green Spaces</h1>
+            class="text-width animate-on-scroll text-white w-full p-8 backdrop-blur-lg rounded-xl border border-cyan-700 my-12 lg:my-16 m-5 lg:w-full lg:backdrop-blur-none lg:border-none interactive-card-green">
+            <h3 class="font-semibold uppercase text-2xl lg:text-3xl text-center heading-shadow">Discover Ain Sebaa's
+              Green Spaces</h3>
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="4" viewBox="0 0 150 4" fill="none"
               class="mx-auto my-5">
-              <path d="M0 2.5H198" stroke="white" stroke-width="4" class="" />
+              <path d="M2 2H148" stroke="white" stroke-width="4" stroke-linecap="round" />
             </svg>
-            <p class="text-2xl text-center px-5">Nestled within the heart of bustling Ain Sebaa lies a hidden treasure:
+            <p class="text-base lg:text-lg text-center px-5 leading-relaxed">Nestled within the heart of bustling Ain Sebaa lies a hidden treasure:
               the district's lush and vibrant green spaces. These oases of tranquility offer a refreshing escape from
               the urban rhythm, inviting you to immerse yourself in the beauty of nature.</p>
           </div>
@@ -186,22 +186,22 @@
       <div class="flex flex-col-reverse items-center justify-center lg:justify-between lg:flex-row ">
         <div class="hero_p flex justify-center lg:justify-end items-center lg:w-1/2">
           <div
-            class="text-width text-white w-full p-5 backdrop-blur-lg rounded-xl glass my-20 m-5 lg:w-full lg:backdrop-blur-none lg:border-none">
-            <h1 class="font-black uppercase text-4xl text-center">Natural Beauty
-              Urban Convenience</h1>
+            class="text-width animate-on-scroll text-white w-full p-8 backdrop-blur-lg rounded-xl border border-cyan-700 my-12 lg:my-16 m-5 lg:w-full lg:backdrop-blur-none lg:border-none interactive-card-green">
+            <h3 class="font-semibold uppercase text-2xl lg:text-3xl text-center heading-shadow">Natural Beauty
+              Urban Convenience</h3>
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="4" viewBox="0 0 150 4" fill="none"
               class="mx-auto my-5">
-              <path d="M0 2.5H198" stroke="white" stroke-width="4" class="" />
+            <path d="M2 2H148" stroke="white" stroke-width="4" stroke-linecap="round" />
             </svg>
-            <p class="text-2xl text-center px-5">These green havens are more than just pockets of nature; they're
+            <p class="text-base lg:text-lg text-center px-5 leading-relaxed">These green havens are more than just pockets of nature; they're
               integral parts of the community. Located conveniently
               within the urban landscape, they serve as gathering spots for families, friends, and neighbors to come
               together,
               fostering a sense of unity and well-being.</p>
           </div>
         </div>
-        <div class="flex justify-center lg:justify-start items-center lg:w-1/2">
-          <img src="./images/ainsebaa_zoo.png" class="lg:w-full" width="">
+        <div class="flex justify-center lg:justify-start items-center lg:w-1/2 animate-on-scroll">
+          <img src="./images/ainsebaa_zoo.png" loading="lazy" alt="Landscaped area within Ain Sebaa Zoo, showcasing greenery." class="lg:w-full rounded-3xl image-hover-effect" width=""> {/* Added rounded-3xl for consistency if not already present on parent */}
         </div>
       </div>
 
@@ -210,11 +210,11 @@
   </section>
 
   <!-- Map section -->
-  <section class="map flex flex-col items-center justify-center w-full" id="Map">
-    <div class="mt-10">
-      <p class="font-black text-white text-center text-6xl my-3">
+  <section class="map flex flex-col items-center justify-center w-full py-20" id="Map">
+    <div class="mt-10"> {/* This mt-10 is fine for spacing title from top of section padding */}
+      <h2 class="font-black text-white text-center text-4xl sm:text-5xl lg:text-6xl my-3 heading-shadow">
         MAP
-      </p>
+      </h2>
       <svg xmlns="http://www.w3.org/2000/svg" width="132" height="4" viewBox="0 0 132 4" fill="none" class="mx-auto">
         <path d="M2 2H129.5" stroke="white" stroke-width="4" stroke-linecap="round" />
       </svg>

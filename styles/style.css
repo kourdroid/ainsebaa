@@ -29,12 +29,19 @@
 
 
 
-.nav-item:hover,
-.nav-item.active {
-  text-shadow: 0px 3px 7px #00485e;
-  translate: 0 -5px;
+.nav-item {
   transition: all 0.3s ease-in-out;
-  border-bottom: white 2px;
+  border-bottom: 2px solid transparent; /* Prepare for underline */
+  padding-bottom: 5px; /* Add some space for the underline */
+}
+
+.nav-item:hover,
+.nav-item:focus, /* Grouping focus state for similar visual feedback */
+.nav-item.active {
+  text-shadow: 0px 4px 8px #005b79; /* Slightly more pronounced shadow */
+  transform: translateY(-3px); /* Adjusted translate for a subtle lift */
+  border-bottom-color: white; /* Make underline visible */
+  color: #a7f3f8; /* Light cyan for hover/active text */
 }
 
 .fa-solid {
@@ -55,14 +62,38 @@
   border: 1px solid #bfdfff3e;
 }
 
+/* Styles for smooth mobile menu animation - applied only on smaller screens */
+@media (max-width: 767px) { /* Tailwind's md breakpoint is 768px. These styles apply below that. */
+  .nav { /* This is the menuItems element in JS */
+    max-height: 500px; /* Adjust as needed to fit content when open */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    /* Ensure display is block or similar if not flex, to allow max-height to work.
+       Tailwind's default or other classes might already handle this.
+       The .nav element in HTML has text-center, w-full which implies block-like behavior.
+    */
+  }
+
+  .mobile-menu-closed {
+    max-height: 0 !important; /* Use !important to ensure override if necessary, though ideally not needed */
+    /* overflow: hidden; is already on .nav, but can be re-stated if specific to closed state */
+  }
+}
+/* End of styles for smooth mobile menu animation */
 
 p,
 h1,
 svg {
-  text-shadow: 0px 6px 20px #00293A;
+  text-shadow: 0px 3px 10px rgba(0, 41, 58, 0.5); /* Reduced spread, blur, and opacity */
 
 
 }
+
+/* Specific heavier shadow for larger headings if needed, can be applied via class */
+.heading-shadow {
+  text-shadow: 0px 4px 15px rgba(0, 41, 58, 0.6);
+}
+
 
 best-beach-lg {
   margin-right: -20px;
@@ -88,32 +119,94 @@ best-beach-lg {
   }
 }
 
-@keyframes slideFromDown {
+@keyframes slideInLeft {
   from {
-    transform: translateY(800px);
-    opacity: 0;
+    transform: translateX(1000px);
+    opacity: 0; /* Start with opacity 0 */
   }
 
   to {
-    transform: translateY(0)
+    transform: translateX(0);
+    opacity: 1; /* End with opacity 1 */
   }
 }
 
-/* .hero-title {
-  animation: slideInLeft 1s;
-  transition: all 2s ease-out;
-  transition-delay: 1s;
-} */
+@keyframes slideFromDown {
+  from {
+    transform: translateY(800px);
+    opacity: 0; /* Start with opacity 0 */
+  }
 
-/* .hero_p {
-  animation: slideFromDown 2s;
-  transition: all 2s ease-in-out;
-  transition-delay: 1s;
-} */
+  to {
+    transform: translateY(0);
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
+.hero-title {
+  animation: slideInLeft 1s ease-out; /* Removed transition, animation includes timing and delay if needed */
+  /* transition-delay: 1s; /* This can be added to animation shorthand: 1s ease-out 1s */
+}
+
+.hero_p {
+  animation: slideFromDown 1s ease-out 0.5s; /* Added 0.5s delay for sequential animation */
+  animation-fill-mode: backwards; /* Ensures element is styled with opacity 0 before animation starts if delayed */
+  /* transition: all 2s ease-in-out; /* Redundant with animation */
+  /* transition-delay: 1s; /* Redundant with animation */
+}
 
 p {
   text-shadow: 0px 6px 20px #00293A;
 }
+
+/* Scroll-triggered animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform; /* Optimization for browsers */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.2s; /* Slight delay to make animation more noticeable */
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* End of scroll-triggered animation classes */
+
+/* Subtle image hover effect */
+.image-hover-effect {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  border-radius: inherit; /* Ensures the hover effect respects existing border-radius if applied on parent */
+}
+
+.image-hover-effect:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 20px rgba(0, 41, 58, 0.15);
+}
+/* End of image hover effect */
+
+/* Interactive card for Green-Spaces section */
+.interactive-card-green {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  /* Existing styles like border, backdrop-filter, rounded-xl are applied via Tailwind in HTML */
+}
+
+.interactive-card-green:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0px 10px 25px rgba(0, 60, 80, 0.2); /* Enhanced shadow for pop-out effect */
+}
+
+.interactive-card-green h3, /* Targeting h3 within the card */
+.interactive-card-green p {  /* Targeting p within the card */
+  transition: color 0.3s ease-out;
+}
+
+.interactive-card-green:hover h3,
+.interactive-card-green:hover p {
+  color: #e0f7fa; /* Subtle brightening of text color on hover */
+}
+/* End of interactive card for Green-Spaces section */
 
 /* ==================== ABOUT STYLING ================== */
 
@@ -129,17 +222,6 @@ p {
 
 .about-text {
   z-index: 0;
-}
-
-
-.line-height {
-  line-height: 60px;
-  text-transform: capitalize;
-}
-
-.line-height-lg {
-  line-height: 40px;
-  text-transform: capitalize;
 }
 
 nav,
